@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+    </head>
+    <body>
+        <form action="#" id="frm">
+            Digite seu nome: <input type="text" id="nome"> <br><br>
+            Digite seu sobrenome: <input type="text" id="sobrenome"> <br><br>
+            Digite o ano que voce nasceu: <input type="text" id="ano"> <br><br>
+            <input type="button" value="Enviar" onclick="executar()">
+        </form>
+        <p id="resposta"></p>
+        <script>
+            function executar(){
+                let frm = document.forms['frm']
+                let nome = frm.elements.nome.value;
+                let sobrenome = frm.elements.sobrenome.value;
+                let ano = frm.elements.ano.value;
+                
+                var dados = {
+                    nome : nome,
+                    sobrenome : sobrenome, 
+                    ano: ano
+                }
+                    document.getElementById('resposta').innerHTML = "Nome: " + dados.nome + "<br> Sobrenome: " + dados.sobrenome + "<br> Ano: " + dados.ano;
+            }
+        </script>
+    </body>
+</html>
